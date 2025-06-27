@@ -23,12 +23,13 @@ public class AgenciaService {
     }
 
     public void cadastrar(Agencia agencia) {
-       AgenciaHttp agenciaHttp = situacaoCadastralHttpService.buscarPorCnpj(agencia.getCnpj());
-       if(agenciaHttp != null && agenciaHttp.getSituacaoCadastral().equals(SituacaoCadastral.ATIVO)) {
-           agenciaRepository.persist(agencia);
-       } else {
-           throw new AgenciaNaoAtivaOuNaoEncontradaException();
-       }
+//       AgenciaHttp agenciaHttp = situacaoCadastralHttpService.buscarPorCnpj(agencia.getCnpj());
+//       if(agenciaHttp != null && agenciaHttp.getSituacaoCadastral().equals(SituacaoCadastral.ATIVO)) {
+//           agenciaRepository.persist(agencia);
+//       } else {
+//           throw new AgenciaNaoAtivaOuNaoEncontradaException();
+//       }
+        agenciaRepository.persist(agencia);
 
     }
 
