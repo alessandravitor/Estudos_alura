@@ -1,5 +1,12 @@
 package br.com.alura.domain.http;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class AgenciaHttp {
 
     private String nome;
@@ -7,20 +14,5 @@ public class AgenciaHttp {
     private String cnpj;
     private SituacaoCadastral situacaoCadastral;
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getRazaoSocial() {
-        return razaoSocial;
-    }
-
-    public String getCnpj() {
-        return cnpj;
-    }
-
-    public SituacaoCadastral getSituacaoCadastral() {
-        return situacaoCadastral;
-    }
 }
 
