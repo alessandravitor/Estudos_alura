@@ -104,4 +104,8 @@ public class Pet {
         return adocao;
     }
 
+    public void setAdotado(Boolean adotado) {
+        this.adotado = adotado;
+    }
+
 }
