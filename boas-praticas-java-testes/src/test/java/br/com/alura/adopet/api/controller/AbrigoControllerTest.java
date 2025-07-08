@@ -76,7 +76,7 @@ public class AbrigoControllerTest {
     public void deveRetornarCodigo400AoCadastrarAbrigoComErroValidacaoException() throws Exception {
         // ARRANGE
         CadastroAbrigoDto dto = new CadastroAbrigoDto("nome", "12345678901", "emal@email.com");
-        doThrow(ValidacaoException.class).when(abrigoService).cadatrar(dto);
+        doThrow(ValidacaoException.class).when(abrigoService).cadastrar(dto);
 
         // ACT
         var response = mvc.perform(
@@ -87,7 +87,7 @@ public class AbrigoControllerTest {
 
         // ASSERT
         assertEquals(400, response.getStatus());
-        verify(abrigoService, times(1)).cadatrar(dto);
+        verify(abrigoService, times(1)).cadastrar(dto);
 
     }
 
@@ -105,7 +105,7 @@ public class AbrigoControllerTest {
 
         // ASSERT
         assertEquals(200, response.getStatus());
-        verify(abrigoService, times(1)).cadatrar(dto);
+        verify(abrigoService, times(1)).cadastrar(dto);
 
     }
 
